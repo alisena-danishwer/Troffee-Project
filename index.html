@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troffee Education | Smart Assessment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-shell">
+        
+        <header class="app-header">
+            <div class="brand">
+                <div class="logo-box">🏆</div>
+                <div class="brand-text">
+                    <span class="company">Troffee Education</span>
+                    <span class="tagline">Interactive Learning Portal</span>
+                </div>
+            </div>
+            <div class="header-status hidden" id="header-status">
+                <div class="status-item timer-badge">
+                    <span>⏳</span> <span id="global-timer">02:00</span>
+                </div>
+                <div class="status-item score-badge">
+                    <span>✨</span> <span id="current-score">0</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="content-area">
+            
+            <section id="view-role" class="view active">
+                <div class="welcome-msg">
+                    <h1>Select Your Role</h1>
+                    <p>Customize your assessment experience.</p>
+                </div>
+                
+                <div class="role-grid">
+                    <button class="role-card" onclick="app.init('student')">
+                        <div class="icon">🎓</div>
+                        <h3>Student</h3>
+                        <p>General Knowledge & Logic</p>
+                    </button>
+                    <button class="role-card" onclick="app.init('teacher')">
+                        <div class="icon">🍎</div>
+                        <h3>Teacher</h3>
+                        <p>Academic Instruction & Classroom Practices</p>
+                    </button>
+                </div>
+            </section>
+
+            <section id="view-quiz" class="view">
+                
+                <div class="question-card">
+                    <div class="q-meta">
+                        <span class="q-tag">Question <span id="q-index">1</span> of 5</span>
+                        <div class="progress-dots" id="progress-dots">
+                            </div>
+                    </div>
+                    
+                    <h2 id="q-text">Question text loads here...</h2>
+                    
+                    <div class="options-list" id="options-container">
+                        </div>
+                </div>
+
+                <div class="nav-bar">
+                    <button class="nav-btn secondary" id="btn-prev" onclick="app.prev()">
+                        ← Previous
+                    </button>
+                    <button class="nav-btn primary" id="btn-next" onclick="app.next()">
+                        Next →
+                    </button>
+                </div>
+            </section>
+
+            <section id="view-result" class="view">
+                <div class="result-box">
+                    <div class="trophy-icon">🏆</div>
+                    <h1>Assessment Complete</h1>
+                    <p>Here is your performance summary</p>
+                    
+                    <div class="stats-row">
+                        <div class="stat">
+                            <span class="val" id="final-score">0</span>
+                            <span class="label">Total Score</span>
+                        </div>
+                        <div class="stat">
+                            <span class="val" id="final-time">0s</span>
+                            <span class="label">Time Left</span>
+                        </div>
+                    </div>
+
+                    <button class="restart-btn" onclick="location.reload()">Start New Session</button>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="app-footer">
+            Developed by <strong>Ali Sena Danishwer</strong> | Software Engineer
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
