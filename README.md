@@ -88,6 +88,6 @@ The application logic is encapsulated within a single `app` object to prevent gl
 ## ✍️ Developer
 
 **Ali Sena Danishwer**
-*Software Engineer | Internship Applicant*
+*Software Engineer*
 
-> Developed with passion for Trofee Education.
+> Developed with passion for Troffee Education.
